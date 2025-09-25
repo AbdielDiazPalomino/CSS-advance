@@ -1,0 +1,9 @@
+@use 'variables' as v;
+@use 'sass:color';
+@use 'mixins';
+
+body {
+  font-family: sans-serif;
+  background-color: #ecf0f1;
+  padding: 2rem;
+}

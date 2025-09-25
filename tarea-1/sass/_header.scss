@@ -1,0 +1,63 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  background: $color-primario;
+  color: $color-blanco;
+  padding: 1rem 0;
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: $font-principal;
+    font-weight: bold;
+    font-size: $fs-h2;
+    span {
+      color: $color-acento;
+    }
+  }
+
+  .nav {
+    &__list {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: $color-blanco;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s;
+
+          &:hover,
+          &:focus {
+            color: $color-acento;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    &__container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav__list {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}

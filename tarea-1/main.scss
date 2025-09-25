@@ -1,0 +1,44 @@
+@use 'sass/variables' as *;
+@use 'sass/mixins' as *;
+@use 'sass/header' as *;
+@use 'sass/sobre-nosotros' as *;
+@use 'sass/servicios' as *;
+@use 'sass/contacto' as *;
+@use 'sass/footer' as *;
+
+// Estilos generales
+
+body {
+  margin: 0;
+  font-family: $font-principal;
+  font-size: $fs-base;
+  background-color: $color-blanco;
+  color: $color-texto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.btn--primary {
+  @extend .btn; // Clase base si quieres reutilizar
+  background-color: $color-primario;
+  color: $color-blanco;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-primario, 10%);
+  }
+}

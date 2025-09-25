@@ -1,0 +1,56 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.servicios {
+  padding: 3rem 1rem;
+  background: $color-blanco;
+  color: $color-texto;
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-family: $font-principal;
+    font-size: $fs-h2;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .tarjeta {
+    background: $color-fondo;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 300px;
+
+    h3 {
+      font-size: $fs-h3;
+      margin-bottom: 1rem;
+      color: $color-primario;
+    }
+
+    p {
+      font-size: $fs-base;
+      line-height: 1.4;
+    }
+  }
+
+  @include respond-to(md) {
+    &__grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .tarjeta {
+      max-width: 100%;
+    }
+  }
+}
