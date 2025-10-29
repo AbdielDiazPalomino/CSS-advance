@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Contenedor de las tarjetas */
+.reservas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta de reserva */
+.reserva {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+}
+
+/* Animación de entrada */
+.reserva {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de la información dentro de la tarjeta */
+.reserva-info {
+    padding: 10px;
+}
+
+h2.cliente-nombre {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.estado {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estado de la reserva con colores dinámicos */
+.estado-confirmada {
+    background-color: #4caf50;
+    color: white;
+}
+
+.estado-pendiente {
+    background-color: #ff9800;
+    color: white;
+}
+
+.estado-cancelada {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Botón de detalles */
+.btn-detalles {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Efecto hover del botón */
+.btn-detalles:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de hover en las tarjetas */
+.reserva:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño responsive: se adapta a pantallas pequeñas */
+@media (max-width: 768px) {
+    .reservas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Paleta de colores */
+body {
+    background-color: #eaeaea;
+}
