@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #2c3e50;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff; 
+    
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);    
+
+    /* Transformaciones y animaciones */
+    animation: growRotate 3s ease-in-out forwards, floatLogo 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación para hacer crecer y rotar el logo (una vez al cargar) */
+@keyframes growRotate {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(1.5);
+    }
+}
+
+/* Animación para el efecto de flotación del logo (en bucle infinito) */
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo:hover {
+    background-color: #e74c3c;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5); /*aumenta la sombra al hacer hover*/
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.card button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Compatibilidad para navegadores más antiguos con prefijos */
+@-webkit-keyframes growRotate {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(1.5);
+    }
+}
+
+@-webkit-keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes growRotate {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(1.5);
+    }
+}
+
+@-moz-keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
