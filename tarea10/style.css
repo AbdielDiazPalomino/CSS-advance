@@ -1,0 +1,47 @@
+
+
+/* FILE: css/style.css */
+/* Estilos personalizados requeridos */
+
+:root{
+  --brand: #004d40;
+  --brand-2: #00695c;
+}
+
+html { scroll-behavior: smooth; }
+
+.bg-custom { background: linear-gradient(90deg, #003c33 0%, #00695c 100%); }
+.text-custom { color: var(--brand); }
+
+/* Botón blanco llamativo en hero */
+.btncustom{
+  background-color: #ffffff;
+  color: var(--brand-2);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.btncustom:hover{ transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.14); }
+
+/* Hover personalizado para navbar */
+nav a:hover{ opacity: 0.95; }
+
+/* Footer */
+footer { background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.9)); }
+
+/* Sombras extra para cards */
+.shadow-lg { box-shadow: 0 10px 30px rgba(2,6,23,0.12); }
+
+/* Mejor legibilidad en móviles */
+@media (max-width: 768px){
+  h1 { font-size: 1.9rem; }
+}
+
+/* Focus visible accesible */
+:focus { outline: 3px solid rgba(0,77,64,0.18); outline-offset: 2px; }
+
+/* Ajustes finos para inputs */
+input:focus, textarea:focus{ box-shadow: 0 4px 14px rgba(0,77,64,0.06); }
+
+/* Pequeños ajustes para que no parezca Bootstrap */
+button { border: none; }
+
